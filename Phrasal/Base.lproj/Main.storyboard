@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11198.2" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="KCM-H6-Bq8">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Stories-->
+        <scene sceneID="6AR-ZX-big">
+            <objects>
+                <tableViewController title="Stories" id="RD7-nq-3k4" customClass="StoriesTableViewController" customModule="Phrasal" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="du1-9r-O5f">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="StoryTitle" id="Y4h-Km-mcf">
+                                <rect key="frame" x="0.0" y="92" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Y4h-Km-mcf" id="K2F-3j-G4j">
+                                    <frame key="frameInset" width="375" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="xjX-b0-1rj" kind="show" identifier="Show Phrases" id="Gvh-Vq-Y6h"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="RD7-nq-3k4" id="kTh-Ut-7HK"/>
+                            <outlet property="delegate" destination="RD7-nq-3k4" id="CoN-b3-sLk"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Stories" id="rr9-Dx-A1g"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wNq-8L-2xT" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-887" y="85"/>
+        </scene>
+        <!--Phrases View Controller-->
+        <scene sceneID="in6-em-3gN">
+            <objects>
+                <viewController id="xjX-b0-1rj" customClass="PhrasesViewController" customModule="Phrasal" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="qCZ-da-ISS"/>
+                        <viewControllerLayoutGuide type="bottom" id="8cQ-UM-bYj"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="aeW-FL-c0a">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Rh8-v8-j6X">
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Jar-Y2-mvM">
+                                        <subviews>
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="verb" textAlignment="center" minimumFontSize="24" translatesAutoresizingMaskIntoConstraints="NO" id="9Sm-Zf-D2u">
+                                                <fontDescription key="fontDescription" name="BodoniSvtyTwoOSITCTT-Book" family="Bodoni 72 Oldstyle" pointSize="36"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="verb" textAlignment="center" minimumFontSize="24" translatesAutoresizingMaskIntoConstraints="NO" id="FEV-hT-XoF">
+                                                <fontDescription key="fontDescription" name="BodoniSvtyTwoOSITCTT-Book" family="Bodoni 72 Oldstyle" pointSize="36"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="verb" textAlignment="center" minimumFontSize="24" translatesAutoresizingMaskIntoConstraints="NO" id="ai9-Ei-Ws7">
+                                                <fontDescription key="fontDescription" name="BodoniSvtyTwoOSITCTT-Book" family="Bodoni 72 Oldstyle" pointSize="36"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                                <connections>
+                                                    <segue destination="uaD-fr-9ap" kind="show" identifier="Show Story" id="bAp-ri-oDu"/>
+                                                </connections>
+                                            </textField>
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="verb" textAlignment="center" minimumFontSize="24" translatesAutoresizingMaskIntoConstraints="NO" id="Pfx-Av-CCM">
+                                                <fontDescription key="fontDescription" name="BodoniSvtyTwoOSITCTT-Book" family="Bodoni 72 Oldstyle" pointSize="36"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="verb" textAlignment="center" minimumFontSize="24" translatesAutoresizingMaskIntoConstraints="NO" id="hiQ-Wa-Rys">
+                                                <fontDescription key="fontDescription" name="BodoniSvtyTwoOSITCTT-Book" family="Bodoni 72 Oldstyle" pointSize="36"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="verb" textAlignment="center" minimumFontSize="24" translatesAutoresizingMaskIntoConstraints="NO" id="fs3-zJ-Cqv">
+                                                <fontDescription key="fontDescription" name="BodoniSvtyTwoOSITCTT-Book" family="Bodoni 72 Oldstyle" pointSize="36"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="verb" textAlignment="center" minimumFontSize="24" translatesAutoresizingMaskIntoConstraints="NO" id="blP-ek-IIz">
+                                                <fontDescription key="fontDescription" name="BodoniSvtyTwoOSITCTT-Book" family="Bodoni 72 Oldstyle" pointSize="36"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="verb" textAlignment="center" minimumFontSize="24" translatesAutoresizingMaskIntoConstraints="NO" id="Zaw-eT-WQP">
+                                                <fontDescription key="fontDescription" name="BodoniSvtyTwoOSITCTT-Book" family="Bodoni 72 Oldstyle" pointSize="36"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="verb" textAlignment="center" minimumFontSize="24" translatesAutoresizingMaskIntoConstraints="NO" id="xnn-Vl-wkN">
+                                                <fontDescription key="fontDescription" name="BodoniSvtyTwoOSITCTT-Book" family="Bodoni 72 Oldstyle" pointSize="36"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="verb" textAlignment="center" minimumFontSize="24" translatesAutoresizingMaskIntoConstraints="NO" id="mkE-wa-BLo">
+                                                <fontDescription key="fontDescription" name="BodoniSvtyTwoOSITCTT-Book" family="Bodoni 72 Oldstyle" pointSize="36"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="verb" textAlignment="center" minimumFontSize="24" translatesAutoresizingMaskIntoConstraints="NO" id="5fk-xR-NZZ">
+                                                <fontDescription key="fontDescription" name="BodoniSvtyTwoOSITCTT-Book" family="Bodoni 72 Oldstyle" pointSize="36"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="verb" textAlignment="center" minimumFontSize="24" translatesAutoresizingMaskIntoConstraints="NO" id="7Mm-8T-Wcr">
+                                                <fontDescription key="fontDescription" name="BodoniSvtyTwoOSITCTT-Book" family="Bodoni 72 Oldstyle" pointSize="36"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="Jar-Y2-mvM" firstAttribute="leading" secondItem="Rh8-v8-j6X" secondAttribute="leading" id="036-aO-ZBd"/>
+                                    <constraint firstItem="Jar-Y2-mvM" firstAttribute="width" secondItem="Rh8-v8-j6X" secondAttribute="width" id="6hF-Ut-aU7"/>
+                                    <constraint firstItem="Jar-Y2-mvM" firstAttribute="top" secondItem="Rh8-v8-j6X" secondAttribute="top" id="EvH-Ea-WEh"/>
+                                    <constraint firstAttribute="bottom" secondItem="Jar-Y2-mvM" secondAttribute="bottom" id="nhx-fh-PyQ"/>
+                                    <constraint firstAttribute="trailing" secondItem="Jar-Y2-mvM" secondAttribute="trailing" id="uNe-Uy-ghi"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="8cQ-UM-bYj" firstAttribute="top" secondItem="Rh8-v8-j6X" secondAttribute="bottom" id="PQV-63-Efd"/>
+                            <constraint firstAttribute="trailing" secondItem="Rh8-v8-j6X" secondAttribute="trailing" id="SKb-yD-lcs"/>
+                            <constraint firstItem="Rh8-v8-j6X" firstAttribute="leading" secondItem="aeW-FL-c0a" secondAttribute="leading" id="aa9-pN-cpR"/>
+                            <constraint firstItem="Rh8-v8-j6X" firstAttribute="top" secondItem="aeW-FL-c0a" secondAttribute="top" id="ejM-a6-VfH"/>
+                        </constraints>
+                    </view>
+                    <toolbarItems/>
+                    <connections>
+                        <outlet property="scrollView" destination="Rh8-v8-j6X" id="sHu-HK-Jvt"/>
+                        <outlet property="scrollViewBottomConstraint" destination="PQV-63-Efd" id="9Xg-J6-fTh"/>
+                        <outlet property="stackView" destination="Jar-Y2-mvM" id="rP4-Li-ICV"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Si2-Nu-wlK" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-142" y="88"/>
+        </scene>
+        <!--Story View Controller-->
+        <scene sceneID="Rdd-7K-O6o">
+            <objects>
+                <viewController storyboardIdentifier="Story Screen" id="uaD-fr-9ap" customClass="StoryViewController" customModule="Phrasal" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="HHI-V0-NFt"/>
+                        <viewControllerLayoutGuide type="bottom" id="rHZ-zE-IDe"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="l97-PW-SYc">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1fe-FI-dzX">
+                                <items>
+                                    <barButtonItem systemItem="action" id="hYp-g8-7hL">
+                                        <connections>
+                                            <action selector="showShareSheet:" destination="uaD-fr-9ap" id="rV0-kC-k51"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" keyboardDismissMode="interactive" editable="NO" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bcQ-rp-fzR">
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <attributedString key="attributedText"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="bcQ-rp-fzR" firstAttribute="leading" secondItem="l97-PW-SYc" secondAttribute="leading" id="AJ9-US-5IV"/>
+                            <constraint firstAttribute="trailing" secondItem="1fe-FI-dzX" secondAttribute="trailing" id="Qg7-oY-9ak"/>
+                            <constraint firstItem="1fe-FI-dzX" firstAttribute="leading" secondItem="l97-PW-SYc" secondAttribute="leading" id="aFO-gD-PPw"/>
+                            <constraint firstItem="rHZ-zE-IDe" firstAttribute="top" secondItem="1fe-FI-dzX" secondAttribute="bottom" id="bHX-h5-DTP"/>
+                            <constraint firstItem="bcQ-rp-fzR" firstAttribute="top" secondItem="HHI-V0-NFt" secondAttribute="bottom" id="mU2-qx-SqU"/>
+                            <constraint firstItem="1fe-FI-dzX" firstAttribute="top" secondItem="bcQ-rp-fzR" secondAttribute="bottom" constant="1" id="nyv-DP-TIJ"/>
+                            <constraint firstAttribute="trailing" secondItem="bcQ-rp-fzR" secondAttribute="trailing" id="qBK-o7-o5m"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="textView" destination="bcQ-rp-fzR" id="XBU-v4-DyI"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cy3-pg-ZFW" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="570.39999999999998" y="87.706146926536732"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="ahU-Ut-ygR">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="KCM-H6-Bq8" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="QeW-bf-thR">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="RD7-nq-3k4" kind="relationship" relationship="rootViewController" id="zUc-J0-wwi"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4ts-L6-kXz" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1635" y="85"/>
+        </scene>
+    </scenes>
+</document>
