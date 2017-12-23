@@ -11,7 +11,7 @@ class StoryViewController: UIViewController {
     textView.scrollRectToVisible(CGRect(x: 0, y: 0, width: 1, height: 1), animated: false)
   }
 
-  func done(_ sender: AnyObject?) {
+  @objc func done(_ sender: AnyObject?) {
     _ = navigationController?.popToRootViewController(animated: true)
   }
 
@@ -35,14 +35,14 @@ class StoryViewController: UIViewController {
     let style = NSMutableParagraphStyle()
     style.alignment = .center
     let titleFont = UIFont(name: "BodoniSvtyTwoOSITCTT-Bold", size: 24)
-    let titleAttributes = [NSFontAttributeName: titleFont!,
-                           NSParagraphStyleAttributeName: style] as [String : AnyObject]
+    let titleAttributes = [NSAttributedStringKey.font: titleFont!,
+                           NSAttributedStringKey.paragraphStyle: style] as [NSAttributedStringKey : Any]
 
     let plainFont = UIFont(name: "BodoniSvtyTwoOSITCTT-Book", size: 24)
-    let plainAttributes = [NSFontAttributeName: plainFont!] as [String : AnyObject]
+    let plainAttributes = [NSAttributedStringKey.font: plainFont!] as [NSAttributedStringKey : Any]
     let phraseFont = UIFont(name: "IrishGrover", size: 24)
-    let phraseAttributes = [NSFontAttributeName: phraseFont!,
-                            NSForegroundColorAttributeName: UIColor.purple] as [String : AnyObject]
+    let phraseAttributes = [NSAttributedStringKey.font: phraseFont!,
+                            NSAttributedStringKey.foregroundColor: UIColor.purple] as [NSAttributedStringKey : Any]
     let newline = NSAttributedString(string: "\n", attributes: plainAttributes)
 
     let a = NSAttributedString(string: template.title, attributes: titleAttributes)

@@ -34,7 +34,7 @@ class PhrasesViewController: UIViewController, UITextFieldDelegate {
   }
   
   
-  func keyboardDidShow(_ notification: NSNotification)
+  @objc func keyboardDidShow(_ notification: NSNotification)
   {
     let info = notification.userInfo?[UIKeyboardFrameBeginUserInfoKey]
 
@@ -65,7 +65,7 @@ class PhrasesViewController: UIViewController, UITextFieldDelegate {
     }
   }
   
-  func keyboardWillHide(_ notification: NSNotification)
+  @objc func keyboardWillHide(_ notification: NSNotification)
   {
     scrollViewBottomConstraint.constant = 0
     view.layoutIfNeeded()
@@ -85,7 +85,7 @@ class PhrasesViewController: UIViewController, UITextFieldDelegate {
   }
 
   // Watch all the text fields to enable/disable the "Submit" button
-  func editingChanged(sender: UIButton)
+  @objc func editingChanged(sender: UIButton)
   {
     var enabled = true
 
@@ -142,7 +142,7 @@ class PhrasesViewController: UIViewController, UITextFieldDelegate {
     }
   }
 
-  func submitPhrases(_ sender: Any?)
+  @objc func submitPhrases(_ sender: Any?)
   {
     let answers = textFields.map({ (f) -> String in
       if let phrase = f.text {

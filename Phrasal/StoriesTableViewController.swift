@@ -68,7 +68,7 @@ func extractFields(_ s: String) -> [String]
     if let r = match {
       let low = s.index(r.lowerBound, offsetBy: 1)
       let high = s.index(r.upperBound, offsetBy: -1)
-      matches.append(s.substring(with: low ..< high))
+      matches.append(String(s[low ..< high]))
       range = high ..< s.endIndex
     }
   } while (match != nil)
